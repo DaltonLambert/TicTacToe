@@ -1,0 +1,29 @@
+.button-container {
+    display: flex;
+  }
+  
+  .vs {
+    margin: 0 10px;
+  }
+
+  table {
+    border-collapse: collapse;
+    display: grid;
+  }
+  
+  td {
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+  }
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  
