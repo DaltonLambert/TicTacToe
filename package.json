@@ -13,5 +13,13 @@
     "tutorial"
   ],
   "author": "Dalton Lambert",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DaltonLambert/TicTacToe.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DaltonLambert/TicTacToe/issues"
+  },
+  "homepage": "https://github.com/DaltonLambert/TicTacToe#readme"
 }
