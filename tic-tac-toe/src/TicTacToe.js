@@ -38,6 +38,7 @@ const TicTacToe = () => {
       return;
     }
     const index = row * 3 + col;
+    console.log(`Square clicked: row ${row}, col ${col}, index ${index}`);
     if (board[index] === null) {
       // Create a new board with the new move
       let newBoard = [...board];
@@ -58,6 +59,7 @@ const TicTacToe = () => {
         console.log('currentPlayer before setCurrentPlayer:', currentPlayer);
         setCurrentPlayer(prevPlayer => (prevPlayer === 'X' ? 'O' : 'X'));
       }
+      
     }
   };
 
