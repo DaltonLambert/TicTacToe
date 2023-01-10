@@ -8,16 +8,37 @@
 
   table {
     border-collapse: collapse;
-    display: grid;
+    
   }
   
   td {
+    
     border: 1px solid white;
     width: 100px;
     height: 100px;
     text-align: center;
     vertical-align: middle;
   }
+  td:first-of-type {
+    border-left-color: transparent;
+    border-top-color: transparent;
+  }
+
+  td:nth-of-type(2) {
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-top-color: transparent;
+  }
+
+  td:nth-of-type(3) {
+    border-right-color: transparent;
+    border-top-color: transparent;
+  }
+  
+  .gameboard-row:nth-of-type(3) td{
+    border-bottom-color: transparent;
+  }
+
   body {
     background-color: black;
     display: flex;
