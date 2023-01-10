@@ -9,6 +9,7 @@ const TicTacToe = () => {
   const [started, setStarted] = useState(false);
   const [board, setBoard] = useState(Array(9).fill(null));
   const [currentPlayer, setCurrentPlayer] = useState('X');
+  
   const [message, setMessage] = useState('');
   const winningCombinations = [    [0, 1, 2],
     [3, 4, 5],
@@ -47,7 +48,7 @@ const TicTacToe = () => {
       // Check if the current player has won the game
       checkWinLoss(newBoard);
       // if the other player is the computer, make a move for the computer
-      if ((currentPlayer === 'X' && player2 === 'computer') || (currentPlayer === 'O' && player1 === 'computer')) {
+      if (currentPlayer === 'X' && player2 === 'computer' && !checkWin(newBoard)) {
         console.log('currentPlayer before setCurrentPlayer:', currentPlayer);
         newBoard = ComputerPlayer.makeMove(newBoard);
         setBoard(newBoard);
@@ -62,6 +63,7 @@ const TicTacToe = () => {
       
     }
   };
+
 
   const checkWin = currentBoard => {
     return winningCombinations.some(combination => {
