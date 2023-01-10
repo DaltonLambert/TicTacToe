@@ -2,7 +2,7 @@ import React from 'react';
 
 const Square = ({ value, onClick }) => {
   return (
-    <td onClick={onClick}>
+    <td className='square-text' onClick={onClick}>
       {value}
     </td>
   );

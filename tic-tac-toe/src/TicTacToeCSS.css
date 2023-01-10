@@ -13,7 +13,7 @@
   
   td {
     
-    border: 1px solid white;
+    border: 20px solid white;
     width: 100px;
     height: 100px;
     text-align: center;
@@ -22,6 +22,7 @@
   td:first-of-type {
     border-left-color: transparent;
     border-top-color: transparent;
+    
   }
 
   td:nth-of-type(2) {
@@ -56,6 +57,10 @@
   color: white;
 }
 
+.square-text {
+  font-size: 40px;
+
+}
 
 
 
