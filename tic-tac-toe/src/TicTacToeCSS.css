@@ -12,19 +12,32 @@
   }
   
   td {
-    border: 1px solid black;
+    border: 1px solid white;
     width: 100px;
     height: 100px;
     text-align: center;
     vertical-align: middle;
   }
   body {
+    background-color: black;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
     margin: 0;
   }
+
+  .gameboard {
+  color: white;
+}
+
+.message {
+  color: white;
+}
+
+
+
+
 
   
   

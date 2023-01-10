@@ -4,8 +4,8 @@ import './TicTacToeCSS.css';
 import ComputerPlayer from './ComputerPlayer';
 
 const TicTacToe = () => {
-  const [player1] = useState('player');
-  const [player2, setPlayer2] = useState('computer');
+  const [player1] = useState('PLAYER (X)');
+  const [player2, setPlayer2] = useState('COMPUTER (O)');
   const [started, setStarted] = useState(false);
   const [board, setBoard] = useState(Array(9).fill(null));
   const [currentPlayer, setCurrentPlayer] = useState('X');
@@ -24,7 +24,7 @@ const TicTacToe = () => {
   ];
 
   const handlePlayer2Click = () => {
-    setPlayer2(player2 === 'player' ? 'computer' : 'player');
+    setPlayer2(player2 === 'PLAYER (O)' ? 'COMPUTER (O)' : 'PLAYER (O)');
   };
 
   const handleStartClick = () => {
@@ -48,7 +48,7 @@ const TicTacToe = () => {
       // Check if the current player has won the game
       checkWinLoss(newBoard);
       // if the other player is the computer, make a move for the computer
-      if (currentPlayer === 'X' && player2 === 'computer' && !checkWin(newBoard)) {
+      if (currentPlayer === 'X' && player2 === 'COMPUTER (O)' && !checkWin(newBoard)) {
         console.log('currentPlayer before setCurrentPlayer:', currentPlayer);
         newBoard = ComputerPlayer.makeMove(newBoard);
         setBoard(newBoard);
@@ -56,7 +56,7 @@ const TicTacToe = () => {
         checkWinLoss(newBoard);
       }
       // only switch to the other player if the other player is not the computer
-      if ((currentPlayer === 'X' && player2 !== 'computer') || (currentPlayer === 'O' && player1 !== 'computer')) {
+      if ((currentPlayer === 'X' && player2 !== 'COMPUTER (O)') || (currentPlayer === 'O' && player1 !== 'COMPUTER (O)')) {
         console.log('currentPlayer before setCurrentPlayer:', currentPlayer);
         setCurrentPlayer(prevPlayer => (prevPlayer === 'X' ? 'O' : 'X'));
       }
@@ -102,7 +102,7 @@ const TicTacToe = () => {
     <div>
       <h1>Tic Tac Toe</h1>
       {renderGameBoard()}
-      {message && <p>{message}</p>}
+      {message && <p class='message'>{message}</p>}
       <div className="button-container">
         <button>{player1}</button>
         <span className="vs">vs</span>
