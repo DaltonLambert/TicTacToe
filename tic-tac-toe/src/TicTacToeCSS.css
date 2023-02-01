@@ -1,5 +1,10 @@
 .button-container {
     display: flex;
+    padding-top: 25px;
+  }
+
+  .start-button {
+    margin-top: 25px;
   }
   
   .vs {
@@ -14,8 +19,8 @@
   td {
     
     border: 20px solid white;
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     text-align: center;
     vertical-align: middle;
   }
@@ -58,7 +63,7 @@
 }
 
 .square-text {
-  font-size: 50px;
+  font-size: 75px;
 
 }
 

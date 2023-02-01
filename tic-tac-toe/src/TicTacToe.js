@@ -108,7 +108,7 @@ const TicTacToe = () => {
         <span className="vs">vs</span>
         <button onClick={handlePlayer2Click}>{player2}</button>
       </div>
-      <button onClick={handleStartClick}>{started ? 'Reset' : 'Start'}</button>
+      <button class="start-button" onClick={handleStartClick}>{started ? 'Reset' : 'Start'}</button>
     </div>
   );
 };
