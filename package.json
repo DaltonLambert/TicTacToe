@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "http-server"
+    "serve": "http-server",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject"
   },
   "keywords": [
     "npm",
@@ -21,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/DaltonLambert/TicTacToe/issues"
   },
-  "homepage": "https://github.com/DaltonLambert/TicTacToe#readme"
+  "homepage": "https://github.com/DaltonLambert/TicTacToe#readme",
+  "devDependencies": {
+    "react-scripts": "^5.0.1"
+  }
 }
